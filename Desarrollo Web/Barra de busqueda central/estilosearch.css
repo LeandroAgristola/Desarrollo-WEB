@@ -1,0 +1,82 @@
+
+/**resetear css**/
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+
+}
+
+
+/**damos propiedades al contenedor**/ 
+.container {
+    position: absolute; /**le damos posicion absoluta al contenedor**/
+    left: 48%; /**posicionamos con unidades relativas**/
+    top: 45%; /**posicionamos con unidades relativas**/
+    transform: translate(-50%,-50%); /**transladamos el elemento a la posicion, para luego aplicar la animacion de desplazamiento**/
+    padding: 10px; 
+}
+
+
+/**damos propiedades el boton**/
+input {
+    outline: none; /**eliminamos el contorno**/
+    box-sizing: border-box; /**Mantiene las propiedades del ancho por mas que se incremene el relleno **/
+    height: 60px;
+    width: 0;
+    padding: 0 20px;
+    color: #000;
+    border-radius: 50px; /**bordes redondiados de la barra de busqueda**/
+    font-size: 20px;
+    border: 1px solid #D50000;
+    transition: all .7s ease; /**transicion de entrada**/
+
+}
+
+::placeholder {
+    color: grey; /**color del texto placeholder**/
+
+}
+
+
+/**estilo para el div del icono**/
+.btn {
+    position: absolute; /**le damos posicion absoluta al contenedor**/
+    right: 0; 
+    top: 0;
+    width: 80px; /**tamaño del boton**/
+    height: 80px;  /**tamaño del boton**/
+    background: #D50000; /**color de fondo**/
+    line-height: 80px; /**establecemos el interlineado del texto**/
+    border-radius: 50%; /**establecemos el radio del boton**/
+    text-align: center; /**alineamos el texto en el centro **/
+    cursor: pointer; /**tipo de cursor "mano**/
+    transition: .5s; 
+} 
+
+
+/**estilo para el icono de busqueda**/
+.btn i {
+    font-size: 25px; /**tamaño del icono**/
+    color: white; /**color de icono**/
+    line-height: 80px; /**interlineado **/
+    transition: all .7 ease; /**transicion de salida**/
+
+}
+
+/**establecemos el estilo para el contenedor activo**/
+.container:hover input {
+    width: 350px;
+}
+
+
+/**establecemos el estilo para el icono activo**/
+.container:hover i {
+    transform: rotate(-360deg);
+}
+
+/**establecemos el estilo para el div del icono**/
+.btn:hover {
+    background: #cc0000;
+
+}

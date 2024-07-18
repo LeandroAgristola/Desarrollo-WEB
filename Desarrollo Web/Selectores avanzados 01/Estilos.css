@@ -1,0 +1,131 @@
+*{
+	font-family: 'Phudu', cursive; /*fuente de google*/
+	margin:	0.2em;
+}
+
+body{
+	background: linear-gradient(to bottom, #3b8f5e, #ffffff); /*color en degrade*/
+	background-repeat: no-repeat;
+	background-attachment: fixed;/*aplica el fondo a toda la pagina entera*/
+	
+}
+
+header {
+	background-color: #8549CD;
+	display: flex;
+	border-style: groove;/*estilo del borde*/
+	border-color: black; /*color del borde*/
+	height: 70px; /* alto del elemento */
+	max-width: 100%; /*elemento cubre el maximo de la pantalla sin barra de desplazamiento*/
+	border-width: 0.5em;
+	padding: 10px; /*agregarmos relleno*/
+	align-items: center; /* centra los elementos*/
+}
+
+.logo img { 
+	width: 50px; /*alto de la imegen del logo*/
+	height: 50px; /*ancho de la imegen del logo*/
+	margin-right: 10px; /*separacion entre el logo y el titulo */
+}
+
+.logo {
+	align-items: center; /*alinea los elementos*/
+	display: flex; /*posiciona los elementos verticalmente*/
+	border-width: 0.5em;
+	max-width: 100%; /*elemento cubre el maximo de la pantalla sin barra de desplazamiento*/
+}
+
+nav {
+	background-color: #003e7c;
+	border-style: groove;/*estilo del borde*/
+	border-color: black; /*color del borde*/
+	border-width: 0.5em;
+	max-width: 100%; /*elemento cubre el maximo de la pantalla sin barra de desplazamiento*/
+}
+
+main {
+	background-color:#c3e68b;
+	border-style: groove; /*estilo del borde*/
+	border-color: black; /*color del borde*/
+	max-width: 100%; /*elemento cubre el maximo de la pantalla sin barra de desplazamiento*/
+	border-width: 0.5em;
+	padding: 10px; /*relleno*/
+}
+
+.contenido {
+	border-style: groove; /*estilo del borde*/
+	border-color: black; /*color del borde*/
+	padding: 5%; /*establece un relleno*/
+	height: 500px;%; /*largo total del elemento*/
+	outline-style: inset; /*linea por fuera del borde*/
+	outline-width: 0.5em; /*ancho de la linea*/
+}
+
+ul {	
+	list-style-type: none; /*elimina el marcador de la lista*/
+	margin: 0px; /*elimina el margen*/
+	padding: 10px; /*relleno*/
+	padding-right: 30px;
+	overflow: hidden; /*coloca un color encima del fondo*/
+	
+}
+
+li {
+	float:right; /*agrupa los item de la lista */
+	color: white;
+	margin-right: 10px; /*separa los item de la lista*/
+
+}
+
+li a {
+	display: block; /*crea un bloque al rededor de los item y link*/
+	color: white; /*color del texto */
+	text-align: center; /*aliniacion del texto dentro del bloque*/
+	padding: 16px; /*agrega relleno dentro del bloque*/
+	text-decoration: none; /*elimina la linea de los link*/
+}
+
+p::selection {
+	background-color:yellow; /*color al seleccionar*/
+	color: black; /*color en el color de letra al seleccionar*/
+}
+
+p::first-letter {
+	color:black; /*color en la primera letra de lo parrafos*/
+}
+
+div h2{
+	color:green; /*color en los h2 dentro de un div*/
+}
+
+li[title]{ 
+	color:red;/*color en li que tengan la propiedad title*/
+}
+
+div > p{
+	color:blue; /*color a loss parrafos que sean hijos directos del contenedor*/
+}
+
+footer p:nth-child(2){
+	color:red; /*color al segundo elemento del contenedor (2)*/
+}
+
+footer p:nth-child(3){
+	color:blue; /*color al segundo elemento del contenedor (3)*/
+}
+
+footer p:nth-child(4){
+	color:green; /*color al segundo elemento del contenedor (4)*/
+}
+
+/*parte responsive*/
+@media (max-width:400px) {
+	header {
+		flex-direction: column
+	};
+	
+	nav{
+		padding: 10px 0px;
+
+	}
+}

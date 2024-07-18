@@ -1,0 +1,190 @@
+
+
+/**ESTILO PARA EL HEADER GENERAL**/
+.header{
+    position: fixed; /*EL MENU SE FIJA EN LA PARTE SUPERIOR*/
+    top: 0; /*POSICIONA EL MENU EN LA PARTE SUPERIOR*/
+    left: 0; /*POSICIONA EL MENU EN LA PARTE IZQUIERDA*/
+    right: 0; /*POSICIONA EL MENU EN LA PARTE DERECHA*/
+    background: rgba(100, 33, 255, 0.5);
+    padding: 0 10%; /*RELLENO (SUPERIOR E INFERIOR EN 0) (IZQ Y DER EN 10%)*/
+    display: flex; 
+    align-items: center; /*ALINEA LOS ITEMS EN EL EJE SECUNDARIO*/
+    justify-content: space-between; /*POSICIONA TODOS LOS ELEMENTOS EN EL EJE PRINCIPAL MANTENIENDO EL ESPACIO ENTRE ELLOS*/
+    z-index: 1000;/**POSICIONA EL MENU SOBRE CUALQUIER ELEMENTO*/
+}
+
+/*PROPIEDADES PARA EL LOGO*/
+.logo{
+    font-size: 25px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700; /*ESTABLECE EL GROSOR DE LA FUENTE**/
+}
+
+/*ELIMINAMOS LOS MARCADORES DE LAS LISTAS*/
+.navigation ul{
+    list-style: none;
+}
+
+/*POSICIONAMOS LAS LISTAS*/
+.header .navigation ul li{
+    float: left; /*POSICIONA LOS ITEMS DEL MENU A LA IZQUIERDA*/
+    position: relative; /*PROPIEDAD NECESARIA PARA QUE NUESTRO ELEMENTO SE POSICIONES DONDE INDIQUEMOS*/
+
+}
+
+/*DAMOS ESTILOS A LOS LINK DEL MENU*/
+.header .navigation ul li a{
+    font-size: 18px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    display: block;
+    transition: all .1s ease;
+}
+
+/*DAMOS ESTILO A LOS LINK DEL MENU ACTIVO*/
+.header .navigation ul li a:hover{
+    background-color: black;
+    color: white;
+}
+
+/**DAMOS ESTILO A LAS ANIDADAS EN LA LISTA PADRE**/
+.header .navigation ul li ul{
+    position: absolute;
+    right: 0;
+    width: 300px;
+    background: rgba(100, 33, 255, 0.5);
+    display: none;
+}
+
+/**DAMOS ESTILO A LOS LINK DENTRO DE LOS CAMPOS DE LA LISTA ANIDADA EN LA LISTA PADRE**/
+.header .navigation ul li ul li a{
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+/**ESTILO A LAS LISTAS ANIDADAS DENTRO DE LA LISTA HIJO**/
+.header .navigation ul li ul li ul{
+    position: absolute;
+    top: 0;
+    right: 300px;
+
+}
+
+/** LOS CAMPOS DE LA LISTA HIJO OCUPAN EL 100% DEL ELEMENTO**/
+.header .navigation ul li ul li{
+    width: 100%;
+
+}
+
+/**APLICA ESTILO A LAS LISTAS QUE SEAN HIJOS DIRECTOS**/
+.header .navigation ul li:hover > ul{
+    display: initial;
+}
+
+/**ESTILO PARA LOS SPAN DENTRO DE LAS LISTAS HIJO**/
+.header .navigation ul li ul li span{
+    float: right;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    padding: 5px 10px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/**DAMOS ESTILO A LA BOTONERA DE MENU**/
+#toggle, .header label {
+    display: none; /**OCULTA EL ICONO (IMAGEN) DEL MENU**/
+    cursor:pointer; /**TIPO DE CURSOR CUANDO NOS POSICIONAMOS SOBRE EL ICONO DE MENU**/
+}
+
+/**DAMOS ESTILO A LA IMAGEN DEL MENU**/
+img {
+    width: 45px;
+    height: 35px;
+
+}
+
+/**estilo para el banner general**/
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)), url("banner_principal.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover
+}
+
+/**ESTILO PARA LA PARTE RESPONSIVE (MOVIL)**/
+
+@media(max-width: 950px) {
+
+    /**PROPIEDAD NECESARIA PARA Q APAREZCA EL MENU**/
+    .header label {
+        display:initial;
+    }
+
+    /**TAMAÑO DEL MENU**/
+    .header {
+        padding: 20px 10%;
+
+    }
+
+    /**DAMOS ESTILO AL MENU*/
+    .header .navigation {
+        position: absolute; /**COLOCA EL MENU POR DEBAJO DEL HEADER Y NO ENCIMA**/
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(100, 33, 255, 0.5);
+        display: none; /**OCULTAMOS EL MENU**/
+    }
+
+
+    /**DAMOS ESTILO A LAS LISTAS PADRES**/
+    .header .navigation ul li{
+        width: 100%; /**EL MENU GENERAL OCUPA EL TAMAÑO TOTAL DE LA PANTALLA**/
+    }
+
+    /**DAMOS E STILO A LOS LINK DE LAS LISTAS PADRES**/
+    .header .navigation ul li a {
+        padding: 8px 30px 8px 10%;
+
+    }
+
+    /**DAMOS ESTILO A LAS LISTAS HIJOS**/
+    .header .navigation ul li ul {
+        position: relative; /**PROPIEDAD NECESARIA PARA Q LAS LISTAS NO SE ENCIMEN**/
+        width: 100%;
+        left: 0;
+
+    }
+
+    /**DAMOS ESTILO A LOS ITEM DE LAS LISTAS HIJOS**/
+    .header .navigation ul li ul li {
+        background-color: rgba(100, 33, 255, 0.5);
+    }
+
+    /**DAMOS ESTILO A LAS LISTAS HIJOS DE LOS HIJOS**/
+    .header .navigation ul li ul li ul {
+        position: relative; /**PROPIEDAD NECESARIA PARA Q LAS LISTAS NO SE ENCIMEN**/
+        width: 100%;
+        left: 0;
+    }
+
+    /**DAMOS ESTILO A LOS SPAN DENTRO DE LAS LISTAS HIJOS**/
+    .header .navigation ul li ul li span {
+        padding: 4px 10px;
+        font-size: 10px;
+
+    }
+
+    /**aplica la propiedad al hermano navigation**/
+    #toggle:checked ~ .navigation {
+        display:block; 
+
+    }
+ 
+}

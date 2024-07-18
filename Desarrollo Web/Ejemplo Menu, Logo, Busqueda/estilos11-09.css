@@ -1,0 +1,119 @@
+* { 
+    box-sizing: border-box; /**esta propiedad evita que los contenedores crescan mas de lo que se indica**/
+
+}
+
+html { 
+    scroll-behavior: smooth; /**estilo suave al moverte desde los menus**/
+
+}
+
+body {
+    font-family: 'Kanit', sans-serif; /** establecemos la fuente**/ 
+    font-size: 1.5em; /**establecemos el tamaño general de la fuente**/
+    margin: 0px; /** eliminamos el margen del body que viene por defecto**/ 
+
+}
+
+header {    
+    background-color: rgba(242, 245, 255, 0.2); /**fondo de la cabecera cuando no esta activa**/
+    transition-property: all; /**transicion de salida*/
+	transition-duration: 0.5s; /**transicion de salida*/
+}
+
+header:hover {
+    background-color: rgba(78, 120, 255, 0.2); /** fondo de la cabecera cuando esta activa**/
+    transition-property: all; /**transicion de entrada**/
+	transition-duration: 1s; /**transicion de entrada**/
+}
+
+.contenedor{
+    max-width: 1400px; /**centra el texto a medida que la pagina se agranda **/
+    height: 150px; /**tamaño del contenedor general**/
+    margin: auto;  /***agrega margenes automanicos**/
+    padding-top: 20px; /**relleno superior**/
+}
+
+header .contenedor {
+    display: flex; /**establece el contenedor en bloque**/
+    flex-direction: column; /**alinea los items en columna**/
+}
+
+header .contenedor .logomenu {
+    display: flex; /**establece el contenedor en bloque**/
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+header .contenedor .logomenu .logo{
+    display: flex; /**establece el contenedor en bloque**/
+    align-items: center; /**alinea los items en el centro del contenedor horizontalmente**/
+    font-weight: bold; /**texto en negrita**/
+    color: rgb(48, 48, 119); /***color del texto*/
+    font-size: 1.4em; /**tamaña del texto**/
+    margin: 0px; /**elimina el margen**/
+    padding: 0px; /**elimina el relleno**/
+}
+ 
+
+header .contenedor .logomenu .logo  img{
+    width: 90px; /**ancho de la imagen**/
+    height: 90px; /**alto de la imagen**/
+    margin: 0px; /**margen de la imagen **/
+    margin-right: 20px; /**margen izquierdo***/
+}
+
+header .contenedor .logomenu .menu a{
+    text-decoration: none; /**elimina la linea de los link**/
+    color: rgb(48, 48, 119);  /**color del menu**/
+    padding-right: 15px; /**relleno izquiero entre los items del menu**/
+    transition-property: all; /**transicion de entrada**/
+	transition-duration: 1s; /**transicion de entrada**/
+}
+
+
+header .contenedor .logomenu .menu a:hover{
+    color:rgb(89, 89, 247); /**color del texto del menu al interactuar**/
+    padding: 20px; /**colocamos el mismo paddin que en "a" para q no se mueva el elemento**/
+    transition-property: all; /**transicion de salida*/
+	transition-duration: 0.5s; /**transicion de salida*/
+}
+
+
+header .contenedor .logomenu .menu {
+    display: flex; /**establece el contenedor en bloque**/
+    flex-direction: row; /**posiciona horizontalemtene los "div"**/
+    align-items: center; /**alinea los items en el centro del contenedor horizontalmente**/
+    align-self: flex-end; /**alinea el contenedor hijo "menu" a la derecha **/
+    color: rgb(48, 48, 119);  /**color del texto del menu**/
+    font-weight: bold; /**negrita del menu**/ 
+} 
+
+header .contenedor .logomenu .menu .buscar input {
+    background-color: rgba(242, 245, 255, 0.2); /**color de fondo de la barra de busqueda**/
+    transition-property: all; /**transicion de salida*/
+	transition-duration: 0.5s; /**transicion de salida*/
+    padding: 5px; /**relleno dentro del cuadro de busqueda**/
+    border-color: rgba(48, 48, 119, 0.2); /**color del borde del cuadro de busqueda**/
+    border-radius: 10px; /**borde redondeado del cuadro de busqueda**/
+    width: 50px; /**ancho del cuadro de busquedo cuando no esta activo**/
+    font-size: 1em; /**tamaño de la fuente **/
+    font-weight: bold; /**establece el texto en negrita**/
+    font-family: 'Kanit', sans-serif; /**establece la fuente para el cuadro de busqueda**/
+    border-style: none; /**elimina el borde del cuadro de busqueda*/
+}
+
+header .contenedor .logomenu .menu .buscar input::placeholder{ /**aplicamos la fuente requerida para el icono de busqueda solo en el pseudoelemento **/
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900;
+}
+
+header .contenedor .logomenu .menu .buscar input:hover {
+    background-color: rgba(78, 120, 255, 0.2); /**color del cuadro de busqueda cuando esta activo**/
+    padding-left: 20px;/**agrega relleno a la izquiera para el efecto de movimiento**/
+    width: 500px; /**agranda la barra de busqueda**/
+    transition-property: all; /**transicion de entrada**/
+	transition-duration: 0.5s; /**transicion de entrada**/
+}
+

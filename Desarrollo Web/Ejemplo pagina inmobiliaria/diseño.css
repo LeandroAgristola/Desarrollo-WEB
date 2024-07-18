@@ -1,0 +1,126 @@
+body {
+		font-family:arial; /* fuente general */
+		background-color:black;
+		color:white;  /*color del texto */
+		
+}		
+
+#div1 { /*estilo para fondo principal */
+		background-image: url("Imagenes/fondoprin.png"); /*imagen de fodo principal*/
+		background-repeat: no-repeat; /*no repite la imagen*/
+		background-attachment: fixed; /*estira la imagen*/
+		background-size: 100% 100%; /*la imagen cubre todo el elemento*/
+		
+}
+#div2 { /*estilo para fondo casa */
+		background-image: url("Imagenes/casas.png"); /*imagen de fondo*/
+		background-repeat: no-repeat; /*no repite la imagen*/
+		background-attachment: fixed; /*estira la imagen*/
+		background-size: 100% 100%; /*la imagen cubre todo el elemento*/
+		width: 100%; /*ancho del a imagen*/
+		height:450px; /*alto de la imagen */
+}
+
+#div3 { /*estilo para fondo departamentos */
+		background-image: url("Imagenes/departamentos.png"); /*imagen de fondo*/
+		background-repeat: no-repeat; /*no repite la imagen*/
+		background-attachment: fixed; /*estira la imagen*/
+		background-size: 100% 100%; /*la imagen cubre todo el elemento*/
+		width: 100%; /*ancho del a imagen*/
+		height:450px; /*alto de la imagen */
+		display:inline-block;/*evita lineas entre elementos*/
+}
+
+#div4 { /*estilo para fondo industrias */
+		background-image: url("Imagenes/industrias.png"); /*imagen de fondo*/
+		background-repeat: no-repeat; /*no repite la imagen*/
+		background-attachment: fixed; /*estira la imagen*/
+		background-size: 100% 100%; /*la imagen cubre todo el elemento*/
+		width: 100%; /*ancho del a imagen*/
+		height:450px; /*alto de la imagen */
+		display:inline-block;/*evita lineas entre elementos*/
+}
+
+header {
+		
+		width: 100%; /*ancho del a imagen*/
+		height:450px; /*alto de la imagen */
+}
+
+main {
+		width: 100%; /*ancho del a imagen*/
+		height:450px; /*alto de la imagen */
+}
+
+#imglogo {
+		padding-left: 70px; /*posicion de del logo*/
+		width:450px; /*ancho del a imagen*/
+		height:130px; /*alto de la imagen */
+}
+ul { 
+		list-style-type: none; /*elimina el marcador de la lista*/
+		margin: 0px; /*elimina el margen*/
+		padding: 0px; /*elimina la relleno*/
+		padding-right: 100px;
+		overflow: hidden; /*coloca un color encima del fondo*/
+}
+
+li {
+		float:right; /*agrupa los item de la lista */
+}
+
+li a {
+		display: block; /*crea un bloque al rededor de los item y link*/
+		color: white; /*color del texto */
+		text-align: center; /*aliniacion del texto dentro del bloque*/
+		padding: 16px; /*agrega relleno dentro del bloque*/
+		text-decoration: none; /*elimina la linea de los link*/
+}
+
+#lista:hover {
+		background-color: rgb(20, 74, 120, 0.5); /*color superpuesto*/
+	
+}
+
+#linklista:hover {
+		background-color: rgb(34, 126, 204, 0.5) ; /*color de fondo*/
+}
+
+#pdpdf { /*parrafo centrar */
+		 text-align: center; /*aliniacion del texto dentro del bloque*/
+		 font-size: 1.5vw; /*tamaño de la fuene */
+		 
+}
+
+#dpdf { /*link de descarga de PDF*/
+		border: 4px solid white; /*ancho del borde*/
+		color: white;
+		padding: 8px; /*margenes del borde*/
+		border-radius: 25px; /*tamaño del contendor*/
+		text-decoration: none; /*elimina la linea de los link*/
+}
+
+#dpdf:hover {
+		background-color: rgb(20, 74, 120, 0.5); /*color superpuesto*/
+}
+
+#p1 {
+		font-family:arial;
+		font-size: 1.2vw;
+		padding: 150px;
+	
+}
+
+footer {
+		background-color:white;
+		text-align:center;
+		width: 100%;
+		height:1500px;
+}
+
+#mapa { /*estilo para fondo mapa */
+
+		padding: 10px; /*margenes del borde*/
+		width:700px; /*ancho del a imagen*/
+		height:700px; /*alto de la imagen */
+}

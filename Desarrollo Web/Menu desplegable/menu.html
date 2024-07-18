@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es-ES"> <!--...-->
+		<head> <!--Metadatos OBLIGATORIA-->
+		<meta charset="utf-8"> 
+		<meta name="description" content="decripcion de no mas de 150 caracteres">   <!--para darle una descripcion al buscador de tu sitio web-->
+		<meta name="viewport" content="width=device-width;initial-scale=1.0"> <!--etiqueta importante para visualizar en Moviles-->
+		<link rel="stylesheet" type="text/css" href="../Menu desplegable/estilomenu.css">  <!-- para poner un css -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+		<title> Menu Desplegable </title> <!--titulo de la pestaÃ±a/ventana OBLIGATORIA-->
+	</head>
+	<body> <!--cuerpo OBLIGATORIA-->
+		<header class="header"><!--cabecera-->
+            
+            <div class="logo">Menu</div>
+
+            <input type="checkbox" id="toggle">
+            <label for="toggle"><img src="../Menu desplegable/menu.png" alt="menu"></label>
+            
+            <nav class="navigation">
+
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Servicios</a>
+                        <ul>
+                            <li><a href="#">Servicio <span> 1</span></a></li>
+                            <li><a href="#">Servicio <span> 2</span></a></li>
+                            <li><a href="#">Servicio <span> 3</span></a>
+                                <ul>
+                                    <li><a href="#">menu<span> 1</span></a></li>
+                                    <li><a href="#">Menu<span> 2</span></a></li>
+                                    <li><a href="#">Menu<span> 3</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li> 
+                    <li><a href="#">Blog</a>
+                        <ul>
+                            <li><a href="#">Noticias<span>10 Post</span></a></li>
+                            <li><a href="#">Noticias<span>20 Post</span></a></li>
+                            <li><a href="#">Noticias<span>30 Post</span></a></li>
+                        </ul>
+                    </li>         
+                    <li><a href="#">Contactos</a></li>  
+                </ul>
+            </nav>
+		</header>
+        <div class="hero"></div>
+	</body>
+</html>
+
