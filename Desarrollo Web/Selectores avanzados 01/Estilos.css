@@ -56,7 +56,7 @@ main {
 	border-style: groove; /*estilo del borde*/
 	border-color: black; /*color del borde*/
 	padding: 5%; /*establece un relleno*/
-	height: 500px;%; /*largo total del elemento*/
+	height: 500px; /*largo total del elemento*/
 	outline-style: inset; /*linea por fuera del borde*/
 	outline-width: 0.5em; /*ancho de la linea*/
 }
